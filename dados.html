@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Play Content</title>
+    <link id="logo" rel="shortcut icon" href="imagenes/logo titulo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/dados.css">
+    <script src="./JavaScript/dados.js" defer></script>
+</head>
+<body>
+    <header class="encabezado">
+        
+        <h1>D&D Play Content</h1>
+        <nav class="BarraInicio">
+            <ul class="menu">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./personajes.html">Personajes</a></li>
+                <li><a href="./mapas.html">Mapas</a></li>
+                <li><a href="./dados.html">Tirar dados</a></li>
+                <li><a href="./inventario.html">Inventario interactivo</a></li>
+                <li><a href="./sobre_nosotros.html">Más</a></li>
+            </ul>
+            <ul class="usuario">
+
+                <li><a href="./login.html">Iniciar sesión</a></li>
+                <li><a href="./registro.html">Registrarse</a></li>
+            
+            </ul>
+        
+        </nav>
+        
+    </header><br>
+
+    <h1>Lanzador de dados online</h1>
+
+
+    <div class="dados">
+        
+        <input type="text" id="input" readonly>
+        <label for="numDice">Cantidad de Dados:</label>
+        <input type="number" id="numDice" value="1" min="1">
+
+        <div class="botones">
+
+            <button id="buttond4">d4</button>
+            <button id="buttond6">d6</button>
+            <button id="buttond8">d8</button>
+            <button id="buttond10">d10</button>
+            <button id="buttond12">d12</button>
+            <button id="buttond20">d20</button>
+
+        </div>
+
+        <button id="showLog">Ver tiradas anteriores</button>
+
+    </div>
+
+    <footer class="footer">
+        <p>© 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+        <nav>
+            <ul>
+                <li><a href="./sobre_nosotros.html">Sobre Nosotros</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

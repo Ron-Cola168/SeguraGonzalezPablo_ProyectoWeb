@@ -1,0 +1,249 @@
+body {
+    background-color: rgb(220, 190, 158);
+    font-family: "EB Garamond", serif;
+    margin: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+}
+
+h1 {
+    text-align: center;
+}
+
+.encabezado {
+    max-height: 50%;
+    background-color: rgba(1, 1, 1, 0.8);
+    color: rgba(194, 146, 57, 0.822);
+}
+
+.BarraInicio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(1, 1, 1, 0.8);
+    padding: 10px;
+    border: 4px solid rgba(1, 1, 1, 0.8);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu, .usuario {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    flex: 0 0 80%; /* 80% del espacio */
+    justify-content: flex-start;
+}
+
+.usuario {
+    flex: 0 0 20%; /* 20% del espacio */
+    justify-content: flex-end;
+}
+
+.menu li, .usuario li {
+    padding-right: 1.25em;
+}
+
+.menu li:last-child, .usuario li:last-child {
+    margin-right: 0;
+}
+
+.BarraInicio a {
+    color: rgba(194, 146, 57, 0.822);
+    text-decoration: none;
+    padding: 10px;
+}
+
+.BarraInicio a:hover {
+    background-color: rgba(194, 146, 57, 1);
+    color: rgba(1, 1, 1, 0.8);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .menu, .usuario {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+    .menu li, .usuario li {
+        padding-right: 0.5em;
+    }
+    .menu {
+        justify-content: center;
+    }
+    .usuario {
+        justify-content: center;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: rgba(1, 1, 1, 0.8);
+    color: rgba(194, 146, 57, 0.822);
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Fija el footer en la parte inferior */
+    bottom: 0;
+    width: 100%;
+}
+
+.footer nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer nav ul li a {
+    color: rgba(194, 146, 57, 0.822);
+    text-decoration: none;
+}
+
+.footer nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Inventario */
+#user-levels {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+h2 {
+    padding: 0;
+    margin: 0 0 .5em 0;
+    font-size: 1.3em;
+}
+
+#all-items, #inventory, #equipped-weapons, #equipped-armor {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    padding: 15px 10px;
+    margin-bottom: 20px; /* Más espacio entre las casillas */
+    margin-right: 20px; /* Más espacio entre las casillas lateralmente */
+    background: #eee;
+    text-align: center;
+    background: #fff;
+    box-shadow: 
+        0px 0px 0px 5px rgba(255, 255, 255, 0.4), 
+        0px 0px 12px rgba(0, 0, 0, 0.33);
+    border-radius: 5px;
+    border: 1px solid #cacaca;
+    box-sizing: border-box;
+}
+
+.item {
+    width: 90%;
+    max-width: 100px;
+    padding: 3px 5px;
+    display: block;
+    margin: 0 auto 10px;
+    text-align: center;
+    border: 1px solid #aaa;
+    background: #ddd;
+    cursor: move;
+    border-radius: 5px;
+}
+
+.clear {
+    clear: both;
+}
+
+#description-box {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #cacaca;
+    background: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 
+        0px 0px 0px 5px rgba(255, 255, 255, 0.4), 
+        0px 0px 12px rgba(0, 0, 0, 0.33);
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+@media (min-width: 600px) {
+    #all-items, #inventory, #equipped-weapons, #equipped-armor {
+        float: left;
+        width: 45%; /* Ajustar el ancho para pantallas más grandes */
+        margin-right: 5%;
+        margin-bottom: 20px;
+    }
+
+    #inventory, #equipped-armor {
+        margin-right: 0; /* Quitar margen derecho en las últimas casillas */
+    }
+
+    #description-box {
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 900px) {
+    #all-items, #inventory, #equipped-weapons, #equipped-armor {
+        float: left;
+        width: 21%; /* Ajustar el ancho para pantallas aún más grandes */
+        margin-right: 4%;
+        margin-bottom: 20px;
+    }
+
+    #equipped-armor {
+        margin-right: 0; /* Quitar margen derecho en la última casilla */
+    }
+}
+
+#all-items {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    padding: 15px 10px;
+    margin-bottom: 20px; /* Más espacio entre las casillas */
+    background: #eee;
+    text-align: center;
+    background: #fff;
+    box-shadow:
+        0px 0px 0px 5px rgba(255, 255, 255, 0.4),
+        0px 0px 12px rgba(0, 0, 0, 0.33);
+    border-radius: 5px;
+    border: 1px solid #cacaca;
+    box-sizing: border-box;
+    overflow: hidden; /* Ocultar contenido desbordado */
+}
+
+/* Añadir clase para el contenedor de los items */
+#all-items .item-container {
+    height: 400px; /* Ajusta esta altura según necesites para mostrar solo 5 elementos */
+    overflow-y: scroll; /* Habilitar scroll vertical */
+    overflow-x: hidden; /* Ocultar scroll horizontal si no es necesario */
+}
+
+.item {
+    width: 90%;
+    max-width: 100px;
+    padding: 3px 5px;
+    display: block;
+    margin: 0 auto 10px;
+    text-align: center;
+    border: 1px solid #aaa;
+    background: #ddd;
+    cursor: move;
+    border-radius: 5px;
+}

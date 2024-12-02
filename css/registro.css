@@ -1,0 +1,151 @@
+html {
+    height: 100%;
+    padding: 0;
+    left: 0;
+    margin-top: 0;
+}
+
+body {
+    background-color: rgb(220, 190, 158);
+    font-family: "EB Garamond", serif;
+    margin: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    text-align: center;
+}
+
+.p {
+    color: black;
+}
+
+.encabezado {
+    max-height: 50%;
+    background-color: rgba(1, 1, 1, 0.8);
+    color: rgba(194, 146, 57, 0.822);
+}
+
+.BarraInicio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(1, 1, 1, 0.8);
+    padding: 10px;
+    border: 4px solid rgba(1, 1, 1, 0.8);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu, .usuario {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    flex: 0 0 80%; /* 80% del espacio */
+    justify-content: flex-start;
+}
+
+.usuario {
+    flex: 0 0 20%; /* 20% del espacio */
+    justify-content: flex-end;
+}
+
+.menu li, .usuario li {
+    padding-right: 1.25em;
+}
+
+.menu li:last-child, .usuario li:last-child {
+    margin-right: 0;
+}
+
+.BarraInicio a {
+    color: rgba(194, 146, 57, 0.822);
+    text-decoration: none;
+    padding: 10px;
+    
+}
+
+.BarraInicio a:hover {
+    background-color: rgba(194, 146, 57, 1);
+    color: rgba(1, 1, 1, 0.8);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .menu, .usuario {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+    .menu li, .usuario li {
+        padding-right: 0.5em;
+    }
+    .menu {
+        justify-content: center;
+    }
+    .usuario {
+        justify-content: center;
+    }
+}
+
+
+.formulario_sesion {
+    text-align: justify;
+    border: 2px solid black;
+    padding: 2%;
+    max-width: 550px;
+    margin: 0 auto;
+    background-image: url(../imagenes/fondo\ links.jpg);
+    margin-top: 110px;
+}
+
+.formulario_sesion{
+    text-align: center;
+}
+
+.formulario_sesion textarea{
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+    background-color: rgba(1, 1, 1, 0.8);
+    color: rgba(194, 146, 57, 0.822);
+    text-align: center;
+    padding: 20px;
+    position: absolute; /* Fija el footer en la parte inferior */
+    bottom: 0;
+    width: 100%;
+}
+
+.footer nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer nav ul li a {
+    color: rgba(194, 146, 57, 0.822);
+    text-decoration: none;
+}
+
+.footer nav ul li a:hover {
+    text-decoration: underline;
+}

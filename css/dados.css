@@ -1,0 +1,228 @@
+body {
+    background-color: rgb(220, 190, 158);
+    font-family: "EB Garamond", serif;
+    margin: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/*ENCABEZADO*/
+h1 {
+    text-align: center;
+}
+
+.encabezado {
+    max-height: 100%;
+    background-color: rgba(1, 1, 1, 0.8);
+    color: rgba(194, 146, 57, 0.822);
+    width: 100%;
+}
+
+.BarraInicio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(1, 1, 1, 0.8);
+    padding: 10px;
+    border: 4px solid rgba(1, 1, 1, 0.8);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu, .usuario {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    flex: 0 0 80%;
+    justify-content: flex-start;
+}
+
+.usuario {
+    flex: 0 0 20%;
+    justify-content: flex-end;
+}
+
+.menu li, .usuario li {
+    padding-right: 1.25em;
+}
+
+.menu li:last-child, .usuario li:last-child {
+    margin-right: 0;
+}
+
+.BarraInicio a {
+    color: rgba(194, 146, 57, 0.822);
+    text-decoration: none;
+    padding: 10px;
+}
+
+.BarraInicio a:hover {
+    background-color: rgba(194, 146, 57, 1);
+    color: rgba(1, 1, 1, 0.8);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/*FOOTER*/
+.footer {
+    background-color: rgba(1, 1, 1, 0.8);
+    color: rgba(194, 146, 57, 0.822);
+    text-align: center;
+    padding: 20px;
+    position:relative;
+    bottom: 0;
+    width: 100%;
+    grid-area: footer;
+}
+
+.footer nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer nav ul li a {
+    color: rgba(194, 146, 57, 0.822);
+    text-decoration: none;
+}
+
+.footer nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/*ESTILO PARA LOS "DADOS"*/
+.dados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 5%;
+}
+
+#input {
+    font-size: 50px;
+    width: 80%;
+    max-width: 800px; 
+    height: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.botones {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    background-color: rgba(1, 1, 1, 0.8);
+    color: rgba(194, 146, 57, 0.822);
+    font-size: 50px;
+    margin: 10px;
+    padding: 25px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+#numDice {
+    font-size: 20px;
+    margin-left: 10px;
+    width: 50px;
+    text-align: center;
+}
+
+label {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+#diceResults {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dice {
+    font-size: 30px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: wheat;
+    border-radius: 5px;
+}
+
+/*RESPONSIVE*/
+@media (max-width: 768px) {
+    #input {
+        font-size: 40px;
+        height: 80px;
+        width: 90%;
+    }
+
+    button {
+        font-size: 40px;
+        padding: 20px;
+        margin: 5px;
+        width: calc(50% - 20px);
+    }
+
+    #numDice, label {
+        font-size: 18px;
+        width: 45px;
+        margin-left: 5px;
+    }
+
+    .dice {
+        font-size: 25px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu, .usuario {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+
+    .menu li, .usuario li {
+        padding-right: 0.5em;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+
+    .usuario {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Play Content</title>
+    <link rel="stylesheet" href="./css/inventario.css">
+    <link id="logo" rel="shortcut icon" href="imagenes/logo titulo.png" type="image/x-icon">
+    <script src="./JavaScript/inventario.js" defer></script>
+</head>
+<body>
+   
+    <header class="encabezado">
+        
+        <h1>D&D Play Content</h1>
+        <nav class="BarraInicio">
+            <ul class="menu">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./personajes.html">Personajes</a></li>
+                <li><a href="./mapas.html">Mapas</a></li>
+                <li><a href="./dados.html">Tirar dados</a></li>
+                <li><a href="./inventario.html">Inventario interactivo</a></li>
+                <li><a href="./sobre_nosotros.html">Más</a></li>
+            </ul>
+            <ul class="usuario">
+
+                <li><a href="./login.html">Iniciar sesión</a></li>
+                <li><a href="./registro.html">Registrarse</a></li>
+            
+            </ul>
+        
+        </nav>
+        
+    </header><br>
+
+    <p>Esta pagina es un inventario interactivo donde podras administrar tus objetos y armas en tu aventura de D&D. Ahora mismo se encuentra en versión <b>BETA</b> por lo que podriana ocurrir algun nos fallos a la hora de administrar tu equipo. En caso de esos contacta con el soporte tecnico para ayudar a corregir esos bugs para versiones futuras.</p>
+       <section id="user-levels">
+        <h1>Inventario Interactivo</h1>
+        <div id="all-items" ondrop="dropUser(this, event)" ondragenter="return false" ondragover="return false">
+            <h2>Todos los objetos</h2>
+            
+            <div class="item-container">
+            
+                <!-- Estos son los objetos que se pueden mover entre las distintas secciones -->
+
+            <!-- Armas -->
+                <a draggable="true" class="item" id="espada-corta" data-description="Espada corta: Daño 1d6, Peso 3kg, 1 mano, 15 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Espada corta</a>
+                <a draggable="true" class="item" id="hacha-batalla" data-description="Hacha de batalla: Daño 1d8, Peso 5kg, 2 manos, 10 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Hacha de batalla</a>
+                <a draggable="true" class="item" id="maza" data-description="Maza: Daño 1d6, Peso 4kg, 1 mano,8 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Maza</a>
+                <a draggable="true" class="item" id="daga" data-description="Daga: Daño 1d4, Peso 1kg, 1 mano, 2 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Daga</a>
+                <a draggable="true" class="item" id="arco" data-description="Arco: Daño 1d4, Peso 2kg, 2 manos, 15 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Arco</a>
+                <a draggable="true" class="item" id="arco-largo" data-description="Arco largo: Daño 1d8, Peso 2kg, 2 manos, 50 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Arco largo</a>
+                <a draggable="true" class="item" id="escudo" data-description="Escudo: Defensa +2, Peso 7kg, 1 mano, 15 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Escudo</a>
+                <a draggable="true" class="item" id="escudo-torre" data-description="Escudo de torre: Defensa +8, Peso 15kg, 1 mano, 60 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Escudo de torre</a>
+            
+            <!-- Accesorios -->
+                <a draggable="true" class="item" id="amuleto" data-description="Amuleto de protección: Defensa +10, Peso 0.5kg, 100 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Amuleto de protección</a>
+                <a draggable="true" class="item" id="anillo" data-description="Anillo de regeneración: Efecto regenera 5HP por turno, Peso 0.2kg, 110 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Anillo de regeneración</a>
+                <a draggable="true" class="item" id="brazalete" data-description="Brazalete de fuerza: Fueza +5, Peso 0.3kg, 120 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Brazalete de fueza</a>
+           
+            <!-- Armaduras -->
+                    <!-- Set de cuero -->
+                <a draggable="true" class="item" id="cuero1" data-description="Casco de cuero: Defensa +1, Peso 0.9kg, 8 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Casco de cuero</a>
+                <a draggable="true" class="item" id="cuero2" data-description="Peto de cuero: Defensa +4, Peso 6.8kg, 30 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Peto de cuero</a>
+                <a draggable="true" class="item" id="cuero3" data-description="Guantes de cuero: Defensa +1, Peso 0.4kg, 5 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Guantes de cuero</a>
+                <a draggable="true" class="item" id="cuero4" data-description="Grebas de cuero: Defensa +3, Peso 4.4kg, 20 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Grebas de cuero</a>
+                <a draggable="true" class="item" id="cuero5" data-description="Botas de cuero: Defensa +1, Peso 0.9kg, 10 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Botas de cuero</a>
+                    <!-- Set de placas -->
+                <a draggable="true" class="item" id="placas1" data-description="Casco de placas: Defensa +3, Peso 1.8kg, 20 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Casco de placas</a>
+                <a draggable="true" class="item" id="placas2" data-description="Peto de placas: Defensa +8, Peso 20.4kg, 80 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Peto de placas</a>
+                <a draggable="true" class="item" id="placas3" data-description="Guantes de placas: Defensa +3, Peso 1.8kg, 18 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Guantes de placas</a>
+                <a draggable="true" class="item" id="placas4" data-description="Grebas de placas: Defensa +5, Peso 9kg, 35 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Grebas de placas</a>
+                <a draggable="true" class="item" id="placas5" data-description="Botas de placas: Defensa +3, Peso 2.7kg, 25 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Botas de placas</a>
+                    <!-- Set de acero -->
+                <a draggable="true" class="item" id="acero1" data-description="Casco de acero: Defensa +2, Peso 1.3kg, 15 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Casco de acero</a>
+                <a draggable="true" class="item" id="acero2" data-description="Peto de acero: Defensa +6, Peso 18.1kg, 50 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Peto de acero</a>
+                <a draggable="true" class="item" id="acero3" data-description="Guantes de acero: Defensa +2, Peso 1.3kg, 12 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Guantes de acero</a>
+                <a draggable="true" class="item" id="acero4" data-description="Grebas de acero: Defensa +4, Peso 6.8kg, 25 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Grebas de acero</a>
+                <a draggable="true" class="item" id="acero5" data-description="Botas de acero: Defensa +2, Peso 2.2kg, 18 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Botas de acero</a>
+                    <!-- Set de Escamas-->
+                <a draggable="true" class="item" id="escamas1" data-description="Casco de escamas: Defensa +2, Peso 1.3kg, 12 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Casco de escamas</a>
+                <a draggable="true" class="item" id="escamas2" data-description="Peto de escamas: Defensa +6, Peso 15.8kg, 45 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Peto de escamas</a>
+                <a draggable="true" class="item" id="escamas3" data-description="Guantes de escamas: Defensa +2, Peso 0.9kg, 10 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Guantes de escamas</a>
+                <a draggable="true" class="item" id="escamas4" data-description="Grebas de escamas: Defensa +4, Peso 5.4kg, 22 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Grebas de escamas</a>
+                <a draggable="true" class="item" id="escamas5" data-description="Botas de escamas: Defensa +2, Peso 1.8kg, 15 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Botas de escamas</a>
+                    <!-- Set de Mithril -->
+                <a draggable="true" class="item" id="mithril1" data-description="Casco de mithril: Defensa +3, Peso 0.6kg, 50 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Casco de mithril</a>
+                <a draggable="true" class="item" id="mithril2" data-description="Peto de mithril: Defensa +7, Peso 9kg, 120 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Peto de mithril</a>
+                <a draggable="true" class="item" id="mithril3" data-description="Guantes de mithril: Defensa +2, Peso 0.4kg, 40 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Guantes de mithril</a>
+                <a draggable="true" class="item" id="mithril4" data-description="Grebas de mithril: Defensa +4, Peso 3.6kg, 60 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Grebas de mithril</a>
+                <a draggable="true" class="item" id="mithril5" data-description="Botas de mithril: Defensa +2, Peso 0.9kg, 45 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Botas de mithril</a>
+        
+                    <!-- Otros -->
+                <a draggable="true" class="item" id="potion" data-description="Poción: Cura 50 HP, Peso 0.4kg, 10 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Poción de curación</a>
+                <a draggable="true" class="item" id="venda" data-description="Vendas: Cura heridas menores y detiene hemorragias, Peso 0.05kg, 2 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Vendas</a>
+                <a draggable="true" class="item" id="antorcha" data-description="Antorcha: Ilumina zonas oscuras, Duración 1 hora Peso 0.2kg, 1 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Antorcha</a>
+                <a draggable="true" class="item" id="cuerda" data-description="Cuerda: Longitud 50 pies, Peso 2.2kg, 5 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Cuerda</a>
+                <a draggable="true" class="item" id="aceite" data-description="Frasco de acite: Puede utilizarse para crear fuego o lubricar cosas, Peso 0.4kg, 3 monedas" ondragstart="dragUser(this, event)" onclick="showDescription(this)" onmouseover="showDescription(this)">Poción de curación</a>
+            
+            </div>
+        </div>
+
+        <!-- Inventory section -->
+        <div id="inventory" ondrop="dropUser(this, event)" ondragenter="return false" ondragover="return false">
+            <h2>Inventario</h2>
+        </div>
+
+        <!-- Equipped Weapons section -->
+        <div id="equipped-weapons" ondrop="dropUser(this, event)" ondragenter="return false" ondragover="return false">
+            <h2>Armas equipadas</h2>
+        </div>
+
+        <!-- Equipped Armor section -->
+        <div id="equipped-armor" ondrop="dropUser(this, event)" ondragenter="return false" ondragover="return false">
+            <h2>Armadura</h2>
+        </div>
+
+        <div class="clear"></div>
+        <div id="description-box" style="margin-top: 20px; font-weight: bold;"></div> <!-- Caja de descripción -->
+    </section>
+
+
+
+    <footer class="footer">
+        <p>© 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+        <nav>
+            <ul>
+                <li><a href="./sobre_nosotros.html">Sobre Nosotros</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>

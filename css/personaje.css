@@ -1,0 +1,203 @@
+body {
+    background-color: rgb(220, 190, 158);
+    font-family: "EB Garamond", serif;
+    margin: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1{
+    text-align: center;
+}
+
+/*ENCABEZADO*/
+.encabezado {
+    max-height: 50%;
+    background-color: rgba(1, 1, 1, 0.8);
+    color: rgba(194, 146, 57, 0.822);
+}
+
+.BarraInicio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(1, 1, 1, 0.8);
+    padding: 10px;
+    border: 4px solid rgba(1, 1, 1, 0.8);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu, .usuario {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    flex: 0 0 80%; /* 80% del espacio */
+    justify-content: flex-start;
+}
+
+.usuario {
+    flex: 0 0 20%; /* 20% del espacio */
+    justify-content: flex-end;
+}
+
+.menu li, .usuario li {
+    padding-right: 1.25em;
+}
+
+.menu li:last-child, .usuario li:last-child {
+    margin-right: 0;
+}
+
+.BarraInicio a {
+    color: rgba(194, 146, 57, 0.822);
+    text-decoration: none;
+    padding: 10px;
+    
+}
+
+.BarraInicio a:hover {
+    background-color: rgba(194, 146, 57, 1);
+    color: rgba(1, 1, 1, 0.8);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/*RESPONSIVE*/
+@media (max-width: 768px) {
+    .menu, .usuario {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+    .menu li, .usuario li {
+        padding-right: 0.5em;
+    }
+    .menu {
+        justify-content: center;
+    }
+    .usuario {
+        justify-content: center;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 10px;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    th.atributo{
+        width: 55%;
+    }
+
+    .links {
+        position:relative;
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        top: 0;
+        right: 0;
+    }
+
+}
+
+
+/*TABLAS DE PERSONAJES*/
+table {
+    width: 50%;
+    border-collapse: collapse;
+}
+th, td{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: rgba(0, 0, 0, 0.808);
+    color: rgb(212, 175, 55);
+}
+
+.NombreTabla{
+    text-align: center;
+    font-size: x-large;
+    background-color: rgba(0, 0, 0, 0.808);
+    color: rgb(212, 175, 55);
+}
+
+.tablas{
+    margin-bottom: 50px;
+}
+
+/*FOOTER*/
+.footer {
+    background-color: rgba(1, 1, 1, 0.8);
+    color: rgba(194, 146, 57, 0.822);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer nav ul li a {
+    color: rgba(194, 146, 57, 0.822);
+    text-decoration: none;
+}
+
+.footer nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.tutorial {
+    width: 50%;
+    max-width: 600px;
+
+}
+
+.tutorial iframe {
+    width: 100%;
+    height: 450px;
+}
