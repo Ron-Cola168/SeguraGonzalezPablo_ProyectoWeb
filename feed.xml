@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<rss version="2.0">
+		<channel>
+			<title>DnD Play Content</title>
+			
+			<link>https://ron-cola168.github.io/SeguraGonzalezPablo_ProyectoWeb/</link>
+			
+			<description>Una página dedicada a la comunidad de jugadores de Dungeons and Dragons</description>
+		
+			<item>
+				<title>Galeria de tableros</title>
+				<link>https://ron-cola168.github.io/SeguraGonzalezPablo_ProyectoWeb/mapas.html</link>
+				<description>
+					<![CDATA[
+						Mira nuestras fotos:
+						<img src="https://ron-cola168.github.io/SeguraGonzalezPablo_ProyectoWeb/imagenes/Mapas/taberna1.jpg" />]]>
+				</description>
+			</item>
+		</channel>
+	</rss>
+	
